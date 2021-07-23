@@ -1,0 +1,13 @@
+[
+    {
+        "name": "Abdullaziz",
+        "age": 18,
+        "isPeogrammer": true
+    },
+
+    {
+        "name": "Ibroxim",
+        "age": 18,
+        "isPeogrammer": false
+    }
+]

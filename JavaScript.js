@@ -1,23 +1,35 @@
-let isBookShopOpen = false;
+/*  // Bitcoin Value :
+    
+    document.addEventListener('DOMContentLoaded', () => {
+    getBitcoinPrice()
+});
 
-// Promise:
-let willIGetNewBook = new Promise(
-    function (resolve, reject) {
-        setTimeout(() => {
-            if (isBookShopOpen) {
-                let book = {
-                    title: 'The BIG book of knowledge',
-                    author: 'Browm=n Watson'
-                };
-                resolve(book); //fulfiled.
-            } else {
-                let reason = new Error('The shop is close.')
-                reject(reason); //reject.
-            }
-        }, 2000);
+function updateBitcoinPrice(newValue) {
+    document.querySelector('#narx').innerHTML = `${newValue} (USD)`;
+    setTimeout(getBitcoinPrice, 3000);
+}
+
+function getBitcoinPrice() {
+
+    // 1. HXR obyektini hosil qilish
+    let xhr = new XMLHttpRequest();
+    let url = "https://blockchain.info/q/24hrprice";
+
+    // 2.Event handler yozish kerak
+    xhr.onload = function () {
+        try {
+            let data = this.responseText;
+            document.querySelector('#narx').innerHTML =`${data} (USD)`;
+            updateBitcoinPrice(data);
+        } catch (e) {
+            console.log("Error ", e);
+        }
     }
-);
 
-willIGetNewBook
-    .then(result => console.log(result))
-    .catch(error => console.log(error.message));
+    // 3.AJAX request hosil qilish kerak 
+    xhr.open("GET", url)
+
+    // 4.AJAX requestni web servisga yuborish
+    xhr.send();
+} */
+
